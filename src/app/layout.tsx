@@ -61,8 +61,8 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                               backgroundImage: `url(${ico.src})`,
 
                           }}
-                               className=" border-none bg-cover w-[40px] h-[40px] bg-no-repeat sm:hidden lg:inline-block"></div>
-                          <div className=" my-auto">
+                               className=" border-none bg-cover w-[40px] h-[40px] my-auto bg-no-repeat sm:hidden lg:inline-block"></div>
+                          <div className="px-4 my-auto">
                               <span className="font-bold lg:text-xl text-nowrap sm:inline-block hidden text-sm">Tech Club</span><br/>
                               <p className={`sm:inline-block hidden text-nowrap text-xs`}>of <a href="https://dpskolkata.com"
                                        className="underline decoration-1">DPS RPK</a></p>
