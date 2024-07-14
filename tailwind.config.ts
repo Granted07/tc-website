@@ -19,8 +19,12 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        backLight: "url(./assets/bgw.png)",
-        backDark: "url(./assets/bg.png)",
+        backLight: "url(./assets/bgww.png)",
+        backDark: "url(./assets/bgbb.png)",
+      },
+      scale:{
+        20: '0.25',
+        30: '0.35',
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,11 +1,11 @@
-import { FlipWords } from "../components/ui/flip-words";
+import { FlipWords } from "@/components/ui/flip-words";
  
-export function FlipWordsDemo() {
+export function StartingText() {
   const words = ["envision.", "think.", "conceptualize.", "imagine."];
  
   return (
-    <div className="h-[20rem] flex justify-center items-center ">
-      <div className="text-5xl font-bold text-neutral-600 dark:text-neutral-400 tracking-wide ">
+    <div className="pt-[2rem] flex justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-neutral-300 tracking-wide ">
+      <div className="">
             <p className=" pb-5">Code as fast as you can</p>
             <FlipWords className="tracking-wide -ml-2 " words={words} />
       </div>
