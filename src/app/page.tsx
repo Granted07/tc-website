@@ -104,7 +104,7 @@ export default function Home() {
                   </div>
               </div>
               <div className="flex justify-center">
-                  <iframe className="max-w-full h-[10rem] md:h-[17rem] sm:h-[15rem] lg:h-[20rem] aspect-video"
+                  <iframe className="max-w-full h-[10rem] md:h-[17rem] sm:h-[15rem] lg:h-[20rem] xl:h-[30rem] 2xl:h-[35rem] aspect-video"
                           src="https://www.youtube.com/embed/Ba53ZbzIuTw?si=Y3z7acl3EOYv18gs&amp;controls=0"
                           title="YouTube video player"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -10,7 +10,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground bg-cover bg-repeat bg-backLight dark:bg-backDark w-screen h-screen;
   }
 }
 

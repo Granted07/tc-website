@@ -47,7 +47,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
               disableTransitionOnChange
           >
               <section
-                  className="md:h-screen relative w-full h-full bg-cover bg-no-repeat bg-backLight dark:bg-backDark overflow-scroll overflow-x-hidden no-scrollbar">
+                  className="md:h-screen w-full h-full overflow-scroll overflow-x-hidden no-scrollbar">
                   <div
                       className="z-50 bottom-10 left-5 fixed bg-background rounded-lg scale-30 sm:scale-50 md:scale-75 lg:scale-100">
                       <ThemeSwitch></ThemeSwitch></div>
