@@ -10,7 +10,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground bg-cover bg-repeat bg-backLight dark:bg-backDark w-screen h-screen;
+    @apply bg-background text-foreground bg-cover bg-repeat bg-backLight dark:bg-backDark w-screen h-screen overflow-x-hidden;
   }
 }
 
@@ -21,4 +21,8 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.nav{
+  content: "";
+  width: 15rem;
 }
