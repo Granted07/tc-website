@@ -85,7 +85,7 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <div>
+          <div key={item.name}>
             {item.name}
           </div>
         ))}
