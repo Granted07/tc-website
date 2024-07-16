@@ -11,6 +11,7 @@ import {IconArticle, IconUser, IconUsers} from "@tabler/icons-react";
 import ico from "./favicon.png";
 import React from "react";
 import SetNav from "@/components/ui/nav-button";
+import ScrollProgress from "@/components/ui/scroll-progress";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -47,21 +48,15 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
               enableSystem
               disableTransitionOnChange
           >
-              <section
-                  className="md:h-screen w-full h-full overflow-scroll overflow-x-hidden no-scrollbar">
-                  <div
-                      className="z-50 bottom-10 left-5 fixed bg-background rounded-lg scale-75 lg:scale-100">
+              <section className="md:h-screen w-full h-full overflow-scroll overflow-x-hidden no-scrollbar">
+                  <div className="z-50 bottom-10 left-5 fixed bg-background rounded-lg scale-75 lg:scale-100">
                       <ThemeSwitch></ThemeSwitch>
                   </div>
                   <FloatingNav navItems={navItems}/>
                   <div className="flex flex-row justify-between py-2 z-10">
 
                       <div className="px-7 py-7 sm:flex flex-row">
-                          <div style={{
-                              backgroundImage: `url(${ico.src})`,
-
-                          }}
-                               className=" border-none bg-cover w-[40px] h-[40px] my-auto bg-no-repeat sm:hidden lg:inline-block"></div>
+                          <div style={{backgroundImage: `url(${ico.src})`,}} className=" border-none bg-cover w-[40px] h-[40px] my-auto bg-no-repeat sm:hidden lg:inline-block"></div>
                           <div className="px-4 my-auto">
                               <span className="font-bold lg:text-xl text-nowrap sm:inline-block hidden text-sm">Tech Club</span><br/>
                               <p className={`sm:inline-block hidden text-nowrap text-xs`}>of <a href="https://dpskolkata.com"
@@ -77,6 +72,9 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                       </div>
                   </div>
                   <div className={`overflow-hidden max-w-fit max-h-fit`}><SetNav></SetNav></div>
+                {/* <div>
+                    <ScrollProgress className="top-[65px]" />
+                </div> */}
                   {children}
               </section>
           </ThemeProvider>
