@@ -4,7 +4,6 @@ import "./globals.css";
 import { StartingText } from "@/components/starting-text";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { RefObject, useEffect, useMemo, useState } from "react";
 
 const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
 `;
@@ -194,22 +193,3 @@ export default function Home() {
       </main>
   );
 }
-
-export function useOnScreen(ref: RefObject<HTMLElement>) {
-
-    const [isIntersecting, setIntersecting] = useState(false)
-  
-    const observer = useMemo(() => new IntersectionObserver(
-      ([entry]) => setIntersecting(entry.isIntersecting)
-    ), [ref])
-  
-  
-    useEffect(() => {
-        if (ref.current){
-            observer.observe(ref.current)
-        }
-      return () => observer.disconnect()
-    }, [])
-  
-    return isIntersecting
-  }
