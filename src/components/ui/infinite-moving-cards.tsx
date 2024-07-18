@@ -1,7 +1,21 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import img1 from "@/app/assets/display/1.jpeg"
+import img2 from "@/app/assets/display/2.jpeg"
+import img3 from "@/app/assets/display/3.jpeg"
+import img4 from "@/app/assets/display/4.jpeg"
+import img5 from "@/app/assets/display/5.jpeg"
+import img6 from "@/app/assets/display/6.jpeg"
+import img7 from "@/app/assets/display/7.jpeg"
+import img8 from "@/app/assets/display/8.jpeg"
+import img9 from "@/app/assets/display/9.jpeg"
+import img10 from "@/app/assets/display/10.jpeg"
+import img11 from "@/app/assets/display/11.jpeg"
+
+
 
 export const InfiniteMovingCards = ({
   items,
@@ -11,7 +25,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    name: string;
+    name: any;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -32,8 +46,7 @@ export const InfiniteMovingCards = ({
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-          scrollerRef.current.appendChild(duplicatedItem);
+          // scrollerRef.current.appendChild(duplicatedItem);
         }
       });
 
@@ -64,7 +77,7 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "400s");
       }
     }
   };
@@ -79,14 +92,25 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-8 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0  py-4 w-[1300rem] flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
-          <div key={item.name}>
-            {item.name}
+          <div key={item.name} className="flex justify-around py-7 flex-row h-[20rem] mx-[0.1]">
+            
+            <img className=" rounded-2xl" src={img8.src}/>
+            <img className=" rounded-2xl" src={img4.src}/>
+            <img className=" rounded-2xl" src={img10.src}/>
+            <img className=" rounded-2xl" src={img5.src}/>
+            <img className=" rounded-2xl" src={img6.src}/>
+            <img className=" rounded-2xl" src={img7.src}/>
+            <img className=" rounded-2xl" src={img9.src}/>
+            <img className=" rounded-2xl" src={img1.src}/>
+            <img className=" rounded-2xl" src={img11.src}/>
+            <img className=" rounded-2xl" src={img3.src}/>
+            <img className=" rounded-2xl" src={img2.src}/>
           </div>
         ))}
       </ul>

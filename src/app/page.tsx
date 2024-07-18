@@ -1,15 +1,17 @@
+"use client"
 import { Imajesr } from "@/components/imajes_right";
-import { Imajesl } from "@/components/imajes_left";
 import "./globals.css";
 import { StartingText } from "@/components/starting-text";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { RefObject, useEffect, useMemo, useState } from "react";
 
 const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
 `;
 
 export default function Home() {
   return (
+    
       <main>
         <StartingText></StartingText>
           <div className="flex flex-row justify-center py-[1rem] sm:px-6 lg:px-8">
@@ -185,11 +187,29 @@ export default function Home() {
               </div>
           </div>
           <div className="w-full py-0 md:py-10 lg:py-20 px-[3rem] sm:px-[4rem] md:px-[5rem] lg:px-[7rem] bg-gradient-to-t from-background to-transparent from-90% flex flex-col gap-2 ">
-              <TextGenerateEffect className="pt-0 md:pt-4" words={`In our pursuit of excellence, the Tech Club of DPS RPK envisions a new era of realities through ingenious ideation and compelling visualisations. With unwavering dedication, we strive to push the boundaries of innovation, crafting immersive experiences and revolutionary solutions for the future.`} />
+              <TextGenerateEffect className="pt-0 md:pt-4 pb-0 md:pb-4" words={`In our pursuit of excellence, the Tech Club of DPS RPK envisions a new era of realities through ingenious ideation and compelling visualisations. With unwavering dedication, we strive to push the boundaries of innovation, crafting immersive experiences and revolutionary solutions for the future.`} />
               <Imajesr></Imajesr>  
-              <Imajesl></Imajesl>  
           </div>
           
       </main>
   );
 }
+
+export function useOnScreen(ref: RefObject<HTMLElement>) {
+
+    const [isIntersecting, setIntersecting] = useState(false)
+  
+    const observer = useMemo(() => new IntersectionObserver(
+      ([entry]) => setIntersecting(entry.isIntersecting)
+    ), [ref])
+  
+  
+    useEffect(() => {
+        if (ref.current){
+            observer.observe(ref.current)
+        }
+      return () => observer.disconnect()
+    }, [])
+  
+    return isIntersecting
+  }

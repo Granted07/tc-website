@@ -5,11 +5,11 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export function Imajesr() {
   return (
-    <div className="h-[17rem] rounded-md flex flex-col antialiased bg-background dark:bg-grid-white/[0.05] items-center justify-center relative">
+    <div className="flex flex-col bg-background dark:bg-grid-white/[0.05]">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
-        speed="fast"
+        speed="slow"
       />
     </div>
   );
@@ -17,15 +17,15 @@ export function Imajesr() {
 
 const testimonials = [    
   {
-    name: "lol_image_1"
+    name: "<img src='C:/Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg'/>"
   },
   {
-    name: "lol_image_2"
+    name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
   },
   {
-    name: "lol_image_3"
+    name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
   },
   {
-    name: "lol_image_4"
+    name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
   },
 ];

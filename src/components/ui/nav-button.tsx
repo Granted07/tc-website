@@ -10,7 +10,7 @@ export default function SetNav() {
                 <IconMenu2></IconMenu2>
             </div>
 
-            <div className={`${nav && "nav"} -right-6 fixed flex flex-col gap-8 h-full w-0 -z-100 top-0 bg-background bg-opacity-55 backdrop-blur-md amber-500 ease-in-out duration-500 justify-start sm:hidden overflow-hidden}>`}>
+            <div className={`${nav && "nav"} -right-6 fixed flex flex-col gap-8 h-full w-0 z-100 top-0 bg-background bg-opacity-55 backdrop-blur-md amber-500 ease-in-out duration-500 justify-start sm:hidden overflow-hidden}>`}>
                 <div onClick={() => {setNav(false);}} className={`sm:hidden pt-10 hover:cursor-pointer mx-auto`}>
                     <IconArrowBackUp></IconArrowBackUp>
                 </div>

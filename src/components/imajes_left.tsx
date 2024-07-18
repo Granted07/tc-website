@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import Image from "next/image";
 
 export function Imajesl() {
   return (
@@ -9,7 +10,7 @@ export function Imajesl() {
       <InfiniteMovingCards
         items={testimonials}
         direction="left"
-        speed="fast"
+        speed="slow"
       />
     </div>
   );
@@ -17,15 +18,15 @@ export function Imajesl() {
 
 const testimonials = [
     {
-        name: "lol_image_1"
+        name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
     },
     {
-        name: "lol_image_2"
+        name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
     },
     {
-        name: "lol_image_3"
+        name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
     },
     {
-        name: "lol_image_4"
+        name: "C://Users/anjis/Desktop/vsc/tc-website/src/app/assets/display/1.jpeg"
     },
 ];
